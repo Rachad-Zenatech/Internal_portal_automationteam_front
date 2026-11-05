@@ -10,10 +10,10 @@ config.resolver.extraNodeModules = {
   "@": path.resolve(__dirname, "src"),
 };
 
-// Set Metro port to 8090
+// Set Metro port to 8092
 config.server = {
   ...config.server,
-  port: 8090,
+  port: 8092,
 };
 
 module.exports = config;

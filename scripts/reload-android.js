@@ -59,17 +59,17 @@ async function main() {
   console.log("🔄 Re-syncing ADB reverse ports & reloading Android app...");
 
   try {
-    execSync(`"${adbPath}" reverse tcp:8090 tcp:8090`, { stdio: "ignore" });
-    execSync(`"${adbPath}" reverse tcp:8900 tcp:8900`, { stdio: "ignore" });
-    execSync(`"${adbPath}" reverse tcp:6000 tcp:6000`, { stdio: "ignore" });
-    console.log("🔗 Reverse ports configured (8090, 8900, 6000).");
+    execSync(`"${adbPath}" reverse tcp:8092 tcp:8092`, { stdio: "ignore" });
+    execSync(`"${adbPath}" reverse tcp:8011 tcp:8011`, { stdio: "ignore" });
+    execSync(`"${adbPath}" reverse tcp:5181 tcp:5181`, { stdio: "ignore" });
+    console.log("🔗 Reverse ports configured (8092, 8011, 5181).");
   } catch (err) {
     console.log("⚠️ Could not reverse ports:", err.message);
   }
 
   try {
     execSync(
-      `"${adbPath}" shell am start -a android.intent.action.VIEW -d "exp://127.0.0.1:8090" host.exp.exponent`,
+      `"${adbPath}" shell am start -a android.intent.action.VIEW -d "exp://127.0.0.1:8092" host.exp.exponent`,
       { stdio: "inherit" }
     );
     console.log("✅ Android emulator reloaded successfully with latest bundle!");

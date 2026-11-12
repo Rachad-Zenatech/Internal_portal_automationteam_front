@@ -19,8 +19,8 @@ These rules apply to every AI coding agent working in this repository.
 - Do not repeatedly read files already inspected.
 - Do not load large documentation files unless directly relevant.
 - Prefer targeted searches over broad searches.
-- Before opening a source file, search `.agents/code-map.md` for the file or function name (grep it; do not read the whole map) and read only the line range you need.
-- For orientation (directory layout, what each area does), read `.agents/project-index.md` first; it is a short overview. Use `.agents/code-map.md` only for symbol-level lookups.
+- Before opening a source file, grep `.agents/code-map/` for the file or function name (do not read map files whole) and read only the line range it gives (`L<n>`).
+- For orientation (directory layout, what each area does), read `.agents/project-index.md` first; it is a short overview. Use `.agents/code-map/` only for symbol-level lookups.
 - Do not read files over 400 lines in full, and do not re-read a line range already read in the same task.
 - After adding, moving or renaming functions, regenerate the map: `node .agents/gen_code_map.mjs`.
 - Do not summarize or re-analyze the entire codebase unnecessarily.

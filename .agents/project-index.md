@@ -80,7 +80,7 @@ For function and route definitions with their line numbers, grep `.agents/code-m
 - src/pages/PendingAccess.native.tsx (129 lines) - pending access.native (pages)
 - src/pages/PendingAccess.tsx (62 lines) - If user somehow gets another role, maybe redirect them to home
 - src/services/api.ts (6 lines) - api (services)
-- src/services/apiClient.ts (330 lines) - api client (services)
+- src/services/apiClient.ts (333 lines) - api client (services)
 - src/services/errorReporting.ts (75 lines) - error reporting (services)
 - src/services/helper.ts (17 lines) - helper (services)
 - src/services/queryKeys.ts (25 lines) - Centralized React Query keys for consistent invalidation and caching.
